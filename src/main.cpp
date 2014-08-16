@@ -27,9 +27,9 @@ sf::Text p2ScoreText;
 sf::RectangleShape p1Paddle;
 sf::RectangleShape p2Paddle;
 sf::CircleShape ball;
-sf::Sound sound;
 sf::SoundBuffer collisionSoundBuffer;
 sf::SoundBuffer scoreSoundBuffer;
+sf::Sound sound;
 
 enum Direction
 {
