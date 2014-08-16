@@ -10,7 +10,7 @@
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
 
-#define PADDLE_SIZE sf::Vector2f(WINDOW_WIDTH * 0.025, WINDOW_HEIGHT * 0.17)
+#define PADDLE_SIZE sf::Vector2f(WINDOW_WIDTH * 0.025f, WINDOW_HEIGHT * 0.17f)
 #define PADDLE_VELOCITY 4
 
 #define BALL_RADIUS 20
@@ -44,11 +44,11 @@ void spawnBall(Direction direction)
     std::random_device rd;
     std::mt19937 re(rd());
     
-    std::uniform_int_distribution<float> ufx(2, 4);
+    std::uniform_real_distribution<float> ufx(2, 4);
     
     ballVelocity.x = ufx(re);
     
-    std::uniform_int_distribution<float> ufy(1, 2);
+    std::uniform_real_distribution<float> ufy(1, 2);
     
     ballVelocity.y = ufy(re);
     
@@ -67,14 +67,14 @@ void load()
     p1ScoreText.setFont(defaultFont);
     p1ScoreText.setCharacterSize(50);
     p1ScoreText.setColor(sf::Color::Red);
-    p1ScoreText.setPosition(WINDOW_WIDTH * 0.25f, WINDOW_HEIGHT * 0.08);
+    p1ScoreText.setPosition(WINDOW_WIDTH * 0.25f, WINDOW_HEIGHT * 0.08f);
     
     p2ScoreText.setFont(defaultFont);
     p2ScoreText.setCharacterSize(50);
     p2ScoreText.setColor(sf::Color::Blue);
-    p2ScoreText.setPosition(WINDOW_WIDTH * 0.75f, WINDOW_HEIGHT * 0.08);
+    p2ScoreText.setPosition(WINDOW_WIDTH * 0.75f, WINDOW_HEIGHT * 0.08f);
     
-    int positionY = WINDOW_HEIGHT / 2 - PADDLE_SIZE.y / 2;
+    float positionY = WINDOW_HEIGHT / 2 - PADDLE_SIZE.y / 2;
     
     p1Paddle.setFillColor(sf::Color::Red);
     p1Paddle.setSize(PADDLE_SIZE);
