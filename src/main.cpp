@@ -56,11 +56,11 @@ void load()
     p2Velocity = 0;
     p1ScoreText.setFont(defaultFont);
     p1ScoreText.setCharacterSize(50);
-    p1ScoreText.setColor(sf::Color::Red);
+    p1ScoreText.setFillColor(sf::Color::Red);
     p1ScoreText.setPosition(WINDOW_WIDTH * 0.25f, WINDOW_HEIGHT * 0.08f);
     p2ScoreText.setFont(defaultFont);
     p2ScoreText.setCharacterSize(50);
-    p2ScoreText.setColor(sf::Color::Blue);
+    p2ScoreText.setFillColor(sf::Color::Blue);
     p2ScoreText.setPosition(WINDOW_WIDTH * 0.75f, WINDOW_HEIGHT * 0.08f);
     float positionY = WINDOW_HEIGHT / 2 - PADDLE_SIZE.y / 2;
     p1Paddle.setFillColor(sf::Color::Red);
