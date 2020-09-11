@@ -1,4 +1,4 @@
 Pong
 ====
 
-Pong game using C++ and SFML
+Pong game using C++ and SFML.
